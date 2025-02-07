@@ -1,5 +1,5 @@
 import PropTypes from "prop-types";
-import Transaction from "./Transaction.jsx";
+import Transaction from "../components/SingleTransaction.jsx";
 
 export default function Transactions({ transactions }) {
   return (

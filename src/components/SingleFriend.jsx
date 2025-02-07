@@ -1,4 +1,5 @@
 import PropTypes from "prop-types";
+import Card from "./card";
 
 export default function Friend({ name, sum }) {
   const amountFormatted = new Intl.NumberFormat("nl-NL", {
@@ -7,7 +8,7 @@ export default function Friend({ name, sum }) {
   }).format(sum);
 
   return (
-    <div className="max-w-sm p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
+    <Card>
       <div className="flex items-center justify-between">
         <h3 className="text-lg font-semibold text-gray-800">{name}</h3>
         <span
@@ -18,7 +19,7 @@ export default function Friend({ name, sum }) {
           {amountFormatted}
         </span>
       </div>
-    </div>
+    </Card>
   );
 }
 

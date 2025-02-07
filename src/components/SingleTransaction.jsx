@@ -1,4 +1,5 @@
 import PropTypes from "prop-types";
+import Card from "./card";
 
 export default function Transaction({
   date,
@@ -19,7 +20,7 @@ export default function Transaction({
   });
 
   return (
-    <div className="max-w-sm p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300">
+    <Card>
       <div className="flex items-center justify-between mb-2">
         <h3 className="text-lg font-semibold text-gray-800">{description}</h3>
         <span className={`text-xl font-bold`}>{amountFormatted}</span>
@@ -29,7 +30,7 @@ export default function Transaction({
         <p>Betaald door: {paidBy}</p>
         <p>Gedeeld met: {splitBetween.join(", ")}</p>
       </div>
-    </div>
+    </Card>
   );
 }
 

@@ -1,4 +1,4 @@
-import Friend from "./Friend.jsx";
+import Friend from "../components/SingleFriend.jsx";
 import PropTypes from "prop-types";
 
 export default function Friends({ users }) {

@@ -1,5 +1,6 @@
 import PropTypes from "prop-types";
 import { useState, useEffect } from "react";
+import SingleSettle from "../components/SingleSettle";
 
 export default function Settle({ users }) {
   const [settlements, setSettlements] = useState([]);
@@ -42,31 +43,8 @@ export default function Settle({ users }) {
     <div className="pt-16 space-y-2 p-5 pb-28 overflow-y-auto no-scrollbar">
       <h2 className="text-3xl font-bold pb-4">Afrekenen</h2>
       <div className="grid gap-4">
-        {settlements.map((settlement, index) => (
-          <div
-            key={index}
-            className="max-w-sm p-6 bg-white rounded-lg shadow-md hover:shadow-lg transition-shadow duration-300"
-          >
-            <div className="flex items-center justify-between">
-              <div className="flex flex-col">
-                <span className="text-sm text-gray-500">Van</span>
-                <span className="text-lg font-semibold text-gray-800">
-                  {settlement.fromName}
-                </span>
-              </div>
-              <div className="flex flex-col items-end">
-                <span className="text-sm text-gray-500">Naar</span>
-                <span className="text-lg font-semibold text-gray-800">
-                  {settlement.toName}
-                </span>
-              </div>
-            </div>
-            <div className="mt-4 flex justify-center">
-              <span className="text-xl font-bold text-blue-600">
-                €{settlement.amount.toFixed(2)}
-              </span>
-            </div>
-          </div>
+        {settlements.map((settlement) => (
+          <SingleSettle key={settlement.id} settlement={settlement} />
         ))}
       </div>
     </div>

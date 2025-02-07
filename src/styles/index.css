@@ -16,6 +16,6 @@
   }
 
   .menu-li {
-    @apply text-white text-2xl py-2 flex gap-11 flex items-center justify-between cursor-pointer;
+    @apply text-white text-2xl py-2 flex gap-11 items-center justify-between cursor-pointer;
   }
 }

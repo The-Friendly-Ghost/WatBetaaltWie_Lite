@@ -1,18 +1,16 @@
 import { useState } from "react";
-import Header from "./Header.jsx";
-import Footer from "./Footer.jsx";
+import Header from "../components/Header.jsx";
+import Footer from "../components/Footer.jsx";
 import Friends from "./Friends.jsx";
 import Transactions from "./Transactions.jsx";
 import Settle from "./Settle.jsx";
 
-import { mockUsers, mockTransactions } from "./mockData.js";
+import { mockUsers, mockTransactions } from "../data/mockData.js";
 
 export default function App() {
   const [currentTab, setCurrentTab] = useState(1);
   const [users, setUsers] = useState(mockUsers);
   const [transactions, setTransactions] = useState(mockTransactions);
-
-  // return <div>Hello, World!</div>;
 
   return (
     <div className="relative flex flex-col h-full min-h-[650px] overflow-hidden rounded-lg">
