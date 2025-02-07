@@ -1,0 +1,21 @@
+@import "tailwindcss";
+
+@theme {
+  --font-inter: "inter", "serif";
+}
+
+@layer utilities {
+  /* Chrome, Safari and Opera */
+  .no-scrollbar::-webkit-scrollbar {
+    display: none;
+  }
+
+  .no-scrollbar {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+
+  .menu-li {
+    @apply text-white text-2xl py-2 flex gap-11 flex items-center justify-between cursor-pointer;
+  }
+}
