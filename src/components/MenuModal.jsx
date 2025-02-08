@@ -1,4 +1,3 @@
-import PropTypes from "prop-types";
 import ArrowRight from "../assets/arrow_right.svg?react";
 
 export default function MenuModal({ setCurrentTab, setMenuOpen }) {
@@ -8,7 +7,7 @@ export default function MenuModal({ setCurrentTab, setMenuOpen }) {
   };
 
   return (
-    <ul className="w-full divide-y divide-gray-600">
+    <ul className=" bg-black rounded-box z-1 px-5 pt-5 pb-30 shadow-sm w-full divide-y divide-gray-600">
       <li className="menu-li" onClick={() => handleTabChange(1)}>
         Vrienden
         <ArrowRight className="w-6 h-6 stroke-white" />
@@ -24,8 +23,3 @@ export default function MenuModal({ setCurrentTab, setMenuOpen }) {
     </ul>
   );
 }
-
-MenuModal.propTypes = {
-  setCurrentTab: PropTypes.func.isRequired,
-  setMenuOpen: PropTypes.func.isRequired,
-};

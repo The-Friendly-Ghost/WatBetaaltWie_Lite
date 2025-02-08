@@ -10,7 +10,7 @@ export default function Friend({ name, sum }) {
   return (
     <Card>
       <div className="flex items-center justify-between">
-        <h3 className="text-lg font-semibold text-gray-800">{name}</h3>
+        <h3 className="text-lg font-semibold text-white">{name}</h3>
         <span
           className={`text-xl font-bold ${
             sum >= 0 ? "text-green-500" : "text-red-500"

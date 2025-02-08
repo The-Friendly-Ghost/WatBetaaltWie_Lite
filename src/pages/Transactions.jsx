@@ -3,8 +3,8 @@ import Transaction from "../components/SingleTransaction.jsx";
 
 export default function Transactions({ transactions }) {
   return (
-    <div className="pt-16 space-y-2 p-5 pb-28 overflow-y-auto no-scrollbar">
-      <h2 className="text-3xl font-bold pb-4">Betalingen</h2>
+    <div className="space-y-2 overflow-y-auto w-full">
+      <h2 className="text-3xl font-bold pb-4 pl-8">Betalingen</h2>
       {transactions.map((transaction) => (
         <Transaction
           key={transaction.id}

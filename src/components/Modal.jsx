@@ -1,15 +1,20 @@
-import PropTypes from "prop-types";
+import MenuModal from "./MenuModal";
 
-export default function Modal(props) {
+export default function Modal({ children, isOpen, onClose }) {
   return (
-    <div className="absolute bottom-24 px-5 w-full left-0">
-      <div className=" flex p-5 gap-3 justify-between items-center bg-black rounded-lg">
-        {props.children}
-      </div>
-    </div>
+    <ul className="dropdown-content menu bg-base-100 rounded-box z-1 p-2 shadow-sm w-full divide-y divide-gray-600">
+      <li className="menu-li" onClick={() => handleTabChange(1)}>
+        Vrienden
+        <ArrowRight className="w-6 h-6 stroke-white" />
+      </li>
+      <li className="menu-li" onClick={() => handleTabChange(2)}>
+        Betalingen
+        <ArrowRight className="w-6 h-6 stroke-white" />
+      </li>
+      <li className="menu-li" onClick={() => handleTabChange(3)}>
+        Afrekenen
+        <ArrowRight className="w-6 h-6 stroke-white" />
+      </li>
+    </ul>
   );
 }
-
-Modal.propTypes = {
-  children: PropTypes.node,
-};

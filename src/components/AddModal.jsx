@@ -1,4 +1,3 @@
-import PropTypes from "prop-types";
 import ArrowRight from "../assets/arrow_right.svg?react";
 import Button from "../elements/Button.jsx";
 import { useState } from "react";
@@ -115,15 +114,3 @@ export default function AddModal({ setMenuOpen, users, setUsers }) {
     </div>
   );
 }
-
-AddModal.propTypes = {
-  setMenuOpen: PropTypes.func.isRequired,
-  users: PropTypes.arrayOf(
-    PropTypes.shape({
-      id: PropTypes.string.isRequired,
-      name: PropTypes.string.isRequired,
-      balance: PropTypes.number.isRequired,
-    })
-  ).isRequired,
-  setUsers: PropTypes.func.isRequired,
-};

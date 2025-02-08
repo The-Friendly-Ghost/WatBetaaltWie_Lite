@@ -40,8 +40,8 @@ export default function Settle({ users }) {
   };
 
   return (
-    <div className="pt-16 space-y-2 p-5 pb-28 overflow-y-auto no-scrollbar">
-      <h2 className="text-3xl font-bold pb-4">Afrekenen</h2>
+    <div className="space-y-2 overflow-y-auto w-full">
+      <h2 className="text-3xl font-bold pb-4 pl-8">Betalen</h2>
       <div className="grid gap-4">
         {settlements.map((settlement) => (
           <SingleSettle key={settlement.id} settlement={settlement} />
